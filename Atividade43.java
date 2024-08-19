@@ -2,7 +2,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Atividade43 {
-    private static final int TOTAL_VALUES = 10;
+    private static final int TOTAL_VALUES = 500;
 
     public static void main(String[] args) {
         double[] values = getUserInput();
