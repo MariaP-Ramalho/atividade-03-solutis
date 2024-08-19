@@ -2,11 +2,11 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Atividade43 {
-    private static final int TOTAL_VALUES = 500;
+    private static final int TOTAL_VALUES = 10;
 
     public static void main(String[] args) {
         double[] values = getUserInput();
-        double avarege = calculateAvarege(values);
+        double avarege = calculateAverage(values);
 
         System.out.printf("A média aritmética dos %d valores é: %.2f%n", TOTAL_VALUES, avarege);
     }
@@ -42,7 +42,7 @@ public class Atividade43 {
         return value;
     }
 
-    private static double calculateAvarege(double[] values) {
+    private static double calculateAverage(double[] values) {
         double sum = 0.0;
         for (double value : values) {
             sum += value;
