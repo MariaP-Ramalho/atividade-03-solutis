@@ -9,25 +9,21 @@ public class Atividade18 {
     private static final Scanner SC = new Scanner(System.in);
 
     public static void main(String[] args) {
-        try {
-            int day = getInput("Digite o dia do aniversário (1 a 31): ", 1, 31);
-            int month = getInput("Digite o mês do aniversário (1 a 12): ", 1, 12);
+        int day = getInput("Digite o dia do seu aniversário: ", 1, 31);
+        int month = getInput("Digite o mês do aniversário do seu aniversário: ", 1, 12);
 
-            validateDate(day, month);
+        validateDate(day, month);
 
-            int year = getInput("Digite o ano do aniversário: ", 1, LocalDate.now().getYear());
-            LocalDate dateToday = getCurrentDate();
+        int year = getInput("Digite o ano de nascimento: ", 1, LocalDate.now().getYear());
+        LocalDate dateToday = getCurrentDate();
 
-            LocalDate birthday = LocalDate.of(year, month, day);
-            int age = calculateAge(birthday, dateToday);
+        LocalDate birthday = LocalDate.of(year, month, day);
+        int age = calculateAge(birthday, dateToday);
 
-            System.out.println("Sua idade é: " + age + " anos.");
+        System.out.println("Sua idade é: " + age + " anos.");
 
-        } catch (InputMismatchException e) {
-            System.out.println("Entrada inválida. Por favor, insira números inteiros.");
-        } finally {
-            SC.close();
-        }
+        SC.close();
+
     }
 
     private static int getInput(String prompt, int minValue, int maxValue) {

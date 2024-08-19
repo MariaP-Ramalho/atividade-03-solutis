@@ -7,17 +7,13 @@ public class Atividade15 {
     private static final Scanner SC = new Scanner(System.in);
 
     public static void main(String[] args) {
-        try {
-            int day = getInput("Digite o dia (1 a 31): ", 1, 31);
-            int month = getInput("Digite o mês (1 a 12): ", 1, 12);
+        int day = getInput("Digite o dia do seu aniversário: ", 1, 31);
+        int month = getInput("Digite o mês do seu aniversário: ", 1, 12);
 
-            validateAndPrintDate(day, month);
+        validateAndPrintDate(day, month);
 
-        } catch (InputMismatchException e) {
-            System.out.println("Entrada inválida. Por favor, insira números inteiros.");
-        } finally {
-            SC.close();
-        }
+        SC.close();
+
     }
 
     private static int getInput(String prompt, int minValue, int maxValue) {
@@ -30,7 +26,7 @@ public class Atividade15 {
                     System.out.println("Entrada inválida. Por favor, insira um valor entre " + minValue + " e " + maxValue + ".");
                 }
             } catch (InputMismatchException e) {
-                System.out.println("Entrada inválida. Por favor, insira um número inteiro.");
+                System.out.println("Entrada inválida. Por favor, insira números inteiros.");
                 SC.next();
             }
         }
