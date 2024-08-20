@@ -3,26 +3,27 @@ import java.util.Scanner;
 
 public class Atividade03 {
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    private static final Scanner SC = new Scanner(System.in);
 
-        int amountMen = requestAmount(sc, "homens");
-        int amountWomen = requestAmount(sc, "mulheres");
+    public static void main(String[] args) {
+
+        int amountMen = requestAmount( "homens");
+        int amountWomen = requestAmount( "mulheres");
 
         displayPercentage(amountMen, amountWomen);
 
-        sc.close();
+        SC.close();
     }
 
-    private static int requestAmount(Scanner sc, String group) {
+    private static int requestAmount(String group) {
         int amount;
         do {
             System.out.print("Digite a quantidade de " + group + " na turma: ");
-            while (!sc.hasNextInt()) {
+            while (!SC.hasNextInt()) {
                 System.out.println("Por favor, digite um número inteiro válido.");
-                sc.next();
+                SC.next();
             }
-            amount = sc.nextInt();
+            amount = SC.nextInt();
             if (amount < 0) {
                 System.out.println("A quantidade não pode ser negativa.");
             }
