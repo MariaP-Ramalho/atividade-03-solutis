@@ -51,7 +51,7 @@ public class Atividade44 {
     }
 
     private static double getValue(int index) {
-        
+
         while (true) {
             System.out.print("Valor " + index + ": ");
             try {
