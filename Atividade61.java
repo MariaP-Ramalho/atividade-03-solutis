@@ -4,20 +4,20 @@ import java.util.Scanner;
 public class Atividade61 {
 
     public static void main(String[] args) {
-        int linhas = solicitarNumeroDeLinhas();
-        desenharPiramide(linhas);
+        int lines = getNumberOfLines();
+        printPiramide(lines);
     }
 
-    private static int solicitarNumeroDeLinhas() {
+    private static int getNumberOfLines() {
         Scanner sc = new Scanner(System.in);
 
         while (true) {
             System.out.print("Digite um número positivo de linhas para a pirâmide: ");
 
             try {
-                int numeroDeLinhas = sc.nextInt();
-                if (numeroDeLinhas > 0) {
-                    return numeroDeLinhas;
+                int numberOfLines = sc.nextInt();
+                if (numberOfLines > 0) {
+                    return numberOfLines;
                 } else {
                     System.out.println("Por favor, insira um número maior que zero.");
                 }
@@ -30,8 +30,8 @@ public class Atividade61 {
 
 
 
-    private static void desenharPiramide(int linhas) {
-        for (int i = 1; i <= linhas; i++) {
+    private static void printPiramide(int lines) {
+        for (int i = 1; i <= lines; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print("*");
             }
